@@ -1,0 +1,11 @@
+applications:
+  - name: cp4i-capstone
+    path: build/libs/cp4i-capstone-0.0.1-SNAPSHOT.jar
+    buildpack: java_buildpack
+    routes:
+      - route:  cp4i-capstone.us-south.cf.appdomain.cloud
+      #- route: cp4i-capstone.cpat-dev-cfee-cluster-afb9c6047b062b44e3f1b3ecfeba4309-0000.us-south.containers.appdomain.cloud
+    stack: cflinuxfs3
+    env:
+      SPRING_PROFILES_ACTIVE: dev
+      #JBP_CONFIG_OicPEN_JDK_JRE: '{ jre: { version: 11.0.2_+ }}'
